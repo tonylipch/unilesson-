@@ -25,6 +25,7 @@ public class strOperations {
 			newString.close();
 
 		}
+		System.out.println(newString.toString());
 
 		return newString.toString();
 
