@@ -17,7 +17,7 @@ public class testInsertLetter {
 		
 		
 		
-	String res =	strOperations.InsertLetter("Tests");
+	String res =	strOperations.InsertLetter("Tests",'s','f');
 		
 		assertEquals("Tesftsf", res);
 		

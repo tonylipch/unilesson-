@@ -1,5 +1,7 @@
 package pr2;
 
+import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Arrays {
@@ -29,16 +31,33 @@ public class Arrays {
 
 	}
 
-	public static void ScanArray(int[] array) {
+	public static void ScanArray(int[] array) throws Exception {
+
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("Enter array: ");
 
-		for (int i = 0; i < array.length; i++) {
+		try {
+			for (int i = 0; i < array.length; i++) {
 
-			array[i] = scan.nextInt();
+				array[i] = scan.nextInt();
+
+			}
+
+		} 
+		
+		catch (Exception e) {
+
+			System.out.println("Wrong number");
+			Scanner scan1 = new Scanner(System.in);
+			for (int i = 0; i < array.length; i++) {
+
+				array[i] = scan1.nextInt();
+
+			}
 
 		}
+
 	}
 
 	public static void DivThree(int[] array) {
@@ -64,7 +83,7 @@ public class Arrays {
 		}
 	}
 
-	public static void main(String[] args) {
+		public static void main(String[] args) throws Exception {
 
 		int[] array = new int[3];
 

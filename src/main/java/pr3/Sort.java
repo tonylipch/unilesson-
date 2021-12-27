@@ -38,8 +38,14 @@ public class Sort {
 
 		for (int i = 0; i < array.length; i++) {
 
+			try {
 			array[i] = scan.nextInt();
-
+			}catch(Exception e) {
+				
+				System.out.println(e.getMessage());
+				array[i] = scan.nextInt();
+				
+			}
 		}
 	}
 	

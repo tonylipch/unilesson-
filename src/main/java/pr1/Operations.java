@@ -1,10 +1,21 @@
 package pr1;
 
+import java.io.IOException;
+
 public class Operations {
 
 	public int sum(int a, int b) {
+		
+		try {
 
 		return a + b;
+		
+		}catch(Exception e) {
+			
+			System.out.println(e.getMessage());
+			
+			return a+b;
+		}
 
 	}
 
@@ -71,19 +82,19 @@ public class Operations {
 
 	public int associativityTh(int a, int b, int c) {
 
-		return (a + c) * (b-a);
+		return (a + c) * (b - a);
 
 	}
-	
-	public int associativityFourth(int a , int b , int c) {
-		
-		return a*b/c+a;
-		
+
+	public int associativityFourth(int a, int b, int c) {
+
+		return a * b / c + a;
+
 	}
-	
-	public int associativityFifth (int a , int b , int c) {
-		
-		return (a+c)*(a*b)/7;
+
+	public int associativityFifth(int a, int b, int c) {
+
+		return (a + c) * (a * b) / 7;
 	}
 
 	public boolean noteq(int a, int b) {
@@ -96,8 +107,9 @@ public class Operations {
 		}
 	}
 
-	public static void main(String[] args) {
-
+	
+	public static void main(String[] args) throws IOException {
+		
 		Operations o = new Operations();
 
 		System.out.println("+ : " + o.sum(12, 5));
@@ -125,6 +137,5 @@ public class Operations {
 		System.out.println("associativity3: " + o.associativityTh(2, 4, 8));
 		System.out.println("associativity4: " + o.associativityFourth(12, 24, 6));
 		System.out.println("associativity5: " + o.associativityFifth(3, 12, 18));
-
 	}
 }
